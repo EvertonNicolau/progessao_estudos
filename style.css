@@ -91,7 +91,7 @@ header p {
 #progresso-container {
     width: 100%;
     max-width: 600px;
-    height: 2px;
+    height: 14px;
     background-color: var(--cor-borda);
     border-radius: 12px;
     margin: 2rem auto;
