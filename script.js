@@ -54,6 +54,35 @@ const roteiroEngenheiro = [
         topicos: ["Finalização do Site", "Previsão Semestre 1", "Auto-avaliação", "🚀 PRONTO!"]
     }
 ];
+// Função para alternar o Dark Mode
+function toggleDarkMode() {
+    const body = document.body;
+    const btn = document.getElementById('btn-dark');
+    
+    body.classList.toggle('dark-mode');
+    
+    // Salva a preferência no navegador
+    const isDark = body.classList.contains('dark-mode');
+    localStorage.setItem('dark-mode-preferencia', isDark);
+    
+    // Altera o ícone do botão
+    btn.innerText = isDark ? "☀️ Modo Claro" : "🌙 Modo Escuro";
+}
+
+// Verifica se o usuário já usava dark mode ao carregar a página
+function carregarPreferenciaDark() {
+    const isDark = localStorage.getItem('dark-mode-preferencia') === 'true';
+    if (isDark) {
+        document.body.classList.add('dark-mode');
+        document.getElementById('btn-dark').innerText = "☀️ Modo Claro";
+    }
+}
+
+// Atualize o seu window.onload para incluir a nova função:
+window.onload = function() {
+    gerarGridEstudos();
+    carregarPreferenciaDark(); // Nova chamada
+};
 
 function atualizarProgresso() {
     const checkboxes = document.querySelectorAll('.check-materia');
