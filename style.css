@@ -36,6 +36,11 @@ body.dark-mode {
 
 /* Botão de Alternar (Estilo Minimalista) */
 #btn-dark {
+   position: fixed;   /* Fixa o botão na tela */
+    top: 20px;         /* Distância do topo */
+    left: 20px;        /* Distância da esquerda */
+    z-index: 1000;     /* Garante que ele fique por cima de tudo */
+   
     background-color: var(--cor-destaque);
     color: white;
     border: none;
@@ -49,7 +54,9 @@ body.dark-mode {
 }
 
 #btn-dark:hover {
-    transform: scale(1.05);
+    transform: translate(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    filter: brightness(1.1);
 }
 /* 3. Cabeçalho */
 header {
@@ -192,6 +199,7 @@ header p {
 }
 /* 8. Responsividade para Mobile */
 @media (max-width: 600px) {
+    header {margin-top: 60px;}
     h1 { font-size: 1.8rem; }
     body { padding: 1.5rem; }
 }
