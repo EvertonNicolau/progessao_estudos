@@ -197,9 +197,47 @@ header p {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     min-width: 30px; /* Garante que o 0% apareça */
 }
-/* 8. Responsividade para Mobile */
-@media (max-width: 600px) {
-    header {margin-top: 60px;}
-    h1 { font-size: 1.8rem; }
-    body { padding: 1.5rem; }
+
+}
+/* --- AJUSTES PARA CELULAR (Mobile) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem; /* Diminui a margem lateral para sobrar mais espaço */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Título um pouco menor para não quebrar muitas linhas */
+        margin-top: 40px;  /* Espaço para o botão de Dark Mode não cobrir o título */
+    }
+
+    /* Aumentando os cards e os textos */
+    .mes-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .mes-card h2 {
+        font-size: 1.3rem; /* Título do mês maior no celular */
+    }
+
+    .topicos-lista li {
+        font-size: 1.1rem;  /* Texto da matéria maior para facilitar o toque */
+        padding: 12px 0;    /* Mais espaço entre as linhas para não clicar errado */
+    }
+
+    /* Aumentando o quadradinho de ticar (importante para o dedo!) */
+    .check-materia {
+        width: 24px;
+        height: 24px;
+        min-width: 24px; /* Garante que ele não "esprema" */
+    }
+
+    /* Barra de progresso mais alta no celular */
+    #progresso-container {
+        height: 15px;
+    }
+
+    #barra-progresso {
+        font-size: 0.9rem;
+    }
 }
