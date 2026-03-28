@@ -25,7 +25,32 @@ body {
     padding: 3rem 1.5rem;
     line-height: 1.6;
 }
+/* Configurações do Dark Mode (Paleta Terrosa Escura) */
+body.dark-mode {
+    --cor-fundo: #1C1917;       /* Marrom quase preto (Café torrado) */
+    --cor-texto: #E7E5E4;       /* Bege acinzentado claro */
+    --cor-borda: #44403C;       /* Marrom pedra escuro */
+    --cor-card: #292524;        /* Card um pouco mais claro que o fundo */
+    --cor-destaque: #D97706;    /* Laranja queimado para contraste */
+}
 
+/* Botão de Alternar (Estilo Minimalista) */
+#btn-dark {
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+#btn-dark:hover {
+    transform: scale(1.05);
+}
 /* 3. Cabeçalho */
 header {
     text-align: center;
