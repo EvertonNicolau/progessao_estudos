@@ -91,18 +91,27 @@ header p {
 #progresso-container {
     width: 100%;
     max-width: 600px;
-    height: 6px;
+    height: 2px;
     background-color: var(--cor-borda);
-    border-radius: 10px;
+    border-radius: 12px;
     margin: 2rem auto;
     overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
 }
 
 #barra-progresso {
-    width: 11%; /* Progresso inicial: 1 mês de 9 */
+    width: 0%; /* Progresso inicial: 1 mês de 9 */
     height: 100%;
     background-color: var(--cor-destaque);
     transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--cor-destaque);
+    display: flex;             /* Flexbox para centralizar o número */
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;        /* Fonte um pouco maior para leitura */
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0.2,1);
 }
 
 /* 5. Grid dos Meses (Responsivo) */
